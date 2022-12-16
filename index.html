@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <!--font-family: 'Handlee', cursive; For text-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +27,7 @@
             <ul class="nav-pc">
                 <li class="nav-pc-list">About</li>
                 <li class="nav-pc-list">Arts</li>
-                <li class="nav-pc-list"><img src="images/mamu-logo.png" alt="logo"></li>
+                <li class="nav-pc-list" id="logo-nav"><img src="images/mamu-logo.png" alt="logo"></li>
                 <li class="nav-pc-list">Contact</li>
                 <li class="nav-pc-list">Email Me</li>
             </ul>
@@ -37,7 +37,12 @@
         <!--Nav bar menu section-->
         <div class="nav-options-m">
             <ul class="nav-m">
-                Menu
+                <li class="nav-m-list" id="logo-nav-m">
+                    LOGO
+                </li>
+                <li class="nav-m-list">
+                    ▲
+                </li>
             </ul>
         </div>
     </section>
@@ -45,10 +50,29 @@
 
     <!--Landing page start-->
     <section class="hero-page" id="hero-page-id">
-        <div class="hero-page-background">
+        <div class="hero-page-left-side">
+            <video class="hero-page-video"autoplay muted loop>
+                <source src="Videos/ArtSlideShow.mp4" type="video/mp4">
+            </video>
         </div>
-        <div class="hero-page-photo">
-            <img src="images/Junu Photo/in-green-sari.jpg" alt="PHOTO">
+        <div class="hero-page-right-side" id="hero-page-right-side-id">
+            <div class="hero-page-profile-card">
+                <div class="profile-card-photo">
+                    <img src="images/Junu Photo/in-green-sari.jpg" alt="JUNU">
+                </div>
+                <div class="profile-card-name">
+                    Junu Mali Shrestha
+                </div>
+                <div class="profile-card-title">
+                    Artist & Teacher<br>
+                    <span>NP +977 9810159456</span>
+                </div>
+                <div class="profile-card-icons">
+                    <a href="#"><img width="40px" height="40px" src="images/Social-media-icons/instagram.png" alt="Insta"></a>
+                    <a href="#"><img width="40px" height="40px" src="images/Social-media-icons/tik-tok.png" alt="Tiktok"></a>
+                    <a href="#"><img width="40px" height="40px" src="images/Social-media-icons/facebook.png" alt="facebook"></a>              
+                </div>
+            </div>
         </div>
     </section>
     <!--landing page end-->
@@ -56,13 +80,10 @@
     <!--Portfolio start-->
     <section class="art-page" id="art-page-id">
         <div class="header">
-           -- My Arts --
+           --ARTS--
         </div>
         <!--Different art sections start-->
         <section class="art-type-thanka">
-            <div class="header">
-                Thanka
-            </div>
             <div class="art-container">
                 <div class="art-showcase">
                     <div class="image-container">
@@ -115,9 +136,6 @@
             </div>
         </section>
         <section class="art-type-mural">
-            <div class="header">
-                Mural
-            </div>
             <div class="art-container">
                 <div class="art-showcase">
                     <div class="image-container">
@@ -170,9 +188,6 @@
             </div>
         </section>
         <section class="art-type-modern">
-            <div class="header">
-                Modern
-            </div>
             <div class="art-container">
                 <div class="art-showcase">
                     <div class="image-container">
@@ -225,9 +240,6 @@
             </div>
         </section>
         <section class="art-type-potrait">
-            <div class="header">
-                Potrait
-            </div>
             <div class="art-container">
                 <div class="art-showcase">
                     <div class="image-container">
@@ -280,9 +292,6 @@
             </div>
         </section>
         <section class="art-type-landscape">
-            <div class="header">
-                Landscpae
-            </div>
             <div class="art-container">
                 <div class="art-showcase">
                     <div class="image-container">
@@ -341,36 +350,31 @@
     <!--About page start-->
     <section class="about-page" id="about-page-id">
         <div class="header">
-            About Section
+            -About Junu-
         </div>
         <div class="description">
             <div class="photo">
-                <img src="images/Junu Photo/in-green-sari.jpg" alt="">
+                <img src="images/SwanB&W.png" alt="">
             </div>
             <div class="paragraph">
                 I am an Artist living as a teacher teaching
-                primary level students for a living.
+                primary level students for a living. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eaque exercitationem excepturi veniam totam nisi velit libero id, sint nemo incidunt blanditiis, praesentium voluptas temporibus dolore pariatur perferendis hic impedit ab quis illum voluptatibus. Illo distinctio odio pariatur aut voluptatum itaque inventore molestias debitis. Accusamus sunt error quos repudiandae sit!
             </div>
-            </div>
+        </div>
     </section>
     <!--About page end-->
     <!--Contact page start-->
     <section class="contact-page" id="contact-page-id">
-        <div class="header">
-            Contacts
-        </div>
         <div class="description">
-            <div class="social-links">
+            <div class="header">
                 You can find me on!
-                <li><a href="">Facebook</a></li>
-                <li><a href="">Instagram</a></li>
-                <li><a href="">Tiktok</a></li>
-                <li><a href="">Youtube</a></li>
-                <li><a href="">Email</a></li>
             </div>
-            <div class="phone-number">
-                You can also contact me on<br>
-                NP +977 <span>9810159456/ 9864297044</span>
+            <div class="social-links">
+                <li><a href=""><img width="40px" height="40px" src="images/Social-media-icons/facebook.png" alt=""></a></li>
+                <li><a href=""><img width="40px" height="40px" src="images/Social-media-icons/instagram.png" alt=""></a></li>
+                <li><a href=""><img width="40px" height="40px" src="images/Social-media-icons/gmail.png" alt=""></a></li>
+                <li><a href=""><img width="40px" height="40px" src="images/Social-media-icons/youtube.png" alt=""></a></li>
+                <li><a href=""><img width="40px" height="40px" src="images/Social-media-icons/tik-tok.png" alt=""></a></li>
             </div>
         </div>
     </section>
