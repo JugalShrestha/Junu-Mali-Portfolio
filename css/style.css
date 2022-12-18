@@ -7,6 +7,7 @@
   --p-color: #fffafa;
   --text: "Handlee", cursive;
   --header: "Lobster", cursive;
+  --m-text:"Cormorant Garamond", serif;
 }
 
 * {
@@ -30,9 +31,7 @@ body .nav-bar {
   align-items: center;
   top: 0;
   width: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: 6vh;
   z-index: 1;
   background: var(--p-color);
   box-shadow: 0 0vh 1vh var(--shadow);
@@ -45,6 +44,8 @@ body .nav-bar .nav-options {
 body .nav-bar .nav-options .nav-pc {
   list-style: none;
   display: flex;
+  padding: 0;
+  max-height: 6vh;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
@@ -52,26 +53,27 @@ body .nav-bar .nav-options .nav-pc {
 }
 body .nav-bar .nav-options .nav-pc .nav-pc-list {
   text-align: center;
-  font-size: 3vh;
+  font-size: 2vh;
   font-family: var(--header);
   width: 15vh;
   cursor: pointer;
   box-sizing: border-box;
 }
 body .nav-bar .nav-options .nav-pc .nav-pc-list:hover {
-  transform: scale(1.5);
-  outline: 0.1vh solid var(--p2-color);
+  -webkit-text-decoration: 0.2vh underline var(--p2-color);
+          text-decoration: 0.2vh underline var(--p2-color);
+}
+body .nav-bar .nav-options .nav-pc .nav-pc-list a {
+  text-decoration: none;
+  color: var(--text-color);
 }
 body .nav-bar .nav-options .nav-pc #logo-nav img {
-  transform: translateY(5vh);
+  transform: translateY(2vh);
   width: 10vh;
   height: 10vh;
   background: var(--p-color);
   padding: 1vh;
-  border-radius: 0 0 5vh 5vh;
-}
-body .nav-bar .nav-options .nav-pc #logo-nav:hover {
-  outline: none;
+  border-radius: 0 0 100% 100%;
 }
 body .nav-bar-m {
   transition: ease-in-out 0.5s;
@@ -104,6 +106,10 @@ body .nav-bar-m .nav-options-m .nav-m .nav-m-list {
   padding: 0.5vh;
   cursor: pointer;
 }
+body .nav-bar-m .nav-options-m .nav-m #logo-nav-m img {
+  width: 7vh;
+  height: 5vh;
+}
 body .hero-page {
   min-height: 100vh;
   width: 100%;
@@ -124,8 +130,95 @@ body .hero-page .hero-page-left-side .hero-page-video {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  filter: blur(5px);
+  filter: blur(1px);
   transform: scale(1.5);
+}
+body .hero-page .hero-page-left-side .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(var(--p2-color), var(--p-color));
+  opacity: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+body .hero-page .hero-page-left-side .overlay .overlay-text {
+  text-align: center;
+  font-size: 2vh;
+  font-family: var(--m-text);
+  width: 100%;
+  background: var(--p2-color);
+  color: var(--p-color);
+  padding: 1vh;
+}
+body .hero-page .hero-page-left-side .hero-page-profile-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35vh;
+  height: 50vh;
+  background: var(--p2-color);
+  border-radius: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2vh;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 0 1vh var(--shadow);
+}
+body .hero-page .hero-page-left-side .hero-page-profile-card .profile-card-photo {
+  border-radius: 100%;
+  width: 50%;
+  height: 40%;
+  overflow: hidden;
+  outline: 0.3vh solid var(--p-color);
+}
+body .hero-page .hero-page-left-side .hero-page-profile-card .profile-card-photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+  filter: sepia(100%);
+  transform: scale(2.5);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .hero-page .hero-page-left-side .hero-page-profile-card .profile-card-name {
+  font-size: 3vh;
+  font-family: var(--header);
+  color: var(--p-color);
+  text-transform: capitalize;
+  font-weight: bold;
+}
+body .hero-page .hero-page-left-side .hero-page-profile-card .profile-card-title {
+  font-size: 2vh;
+  text-align: center;
+  font-family: var(--text);
+  color: var(--p-color);
+  text-transform: capitalize;
+  font-weight: bold;
+}
+body .hero-page .hero-page-left-side .hero-page-profile-card .profile-card-title span {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5vh;
+}
+body .hero-page .hero-page-left-side .hero-page-profile-card .profile-card-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .hero-page .hero-page-left-side .hero-page-profile-card .profile-card-icons a {
+  transition: 0.2s linear;
+  padding: 2vh;
+  filter: grayscale(100%);
+}
+body .hero-page .hero-page-left-side .hero-page-profile-card .profile-card-icons a:hover {
+  filter: grayscale(10%);
 }
 body .hero-page .hero-page-right-side {
   position: absolute;
@@ -135,9 +228,28 @@ body .hero-page .hero-page-right-side {
   align-items: center;
   width: 50%;
   height: 100%;
+  padding: 4vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-image: repeating-linear-gradient(45deg, var(--p2-color) 1vh, var(--p-color) 2vh, transparent 20%), repeating-linear-gradient(315deg, var(--p2-color) 1vh, var(--p-color) 2vh, transparent 20%), repeating-linear-gradient(45deg, var(--p2-color) 3vh, var(--p-color) 5vh);
 }
+body .hero-page .hero-page-right-side .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--p2-color);
+  opacity: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
 body .hero-page .hero-page-right-side .hero-page-profile-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 40vh;
   height: 50vh;
   background: var(--p2-color);
@@ -147,7 +259,6 @@ body .hero-page .hero-page-right-side .hero-page-profile-card {
   justify-content: center;
   gap: 2vh;
   align-items: center;
-  position: relative;
   overflow: hidden;
   box-shadow: 0 0 1vh var(--shadow);
 }
@@ -188,8 +299,6 @@ body .hero-page .hero-page-right-side .hero-page-profile-card .profile-card-titl
   font-size: 1.5vh;
 }
 body .hero-page .hero-page-right-side .hero-page-profile-card .profile-card-icons {
-  position: absolute;
-  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -216,11 +325,10 @@ body .art-page .header {
   width: 100%;
   height: 10vh;
   text-align: center;
-  background: repeating-linear-gradient(90deg, var(--p-color) 3vh, var(--p2-color) 4vh, transparent 20vh), repeating-linear-gradient(90deg, var(--p-color) 10vh, var(--p2-color) 10vh);
   margin-top: 10vh;
   margin-bottom: 10vh;
   font-size: 8vh;
-  color: var(--p-color);
+  color: var(--p2-color);
   font-family: var(--header);
 }
 body .art-page section {
@@ -394,8 +502,11 @@ body .contact-page .description .phone-number span {
 }
 
 @media only screen and (max-width: 1200px) {
-  .hero-page .hero-page-left-side {
+  .hero-page-left-side {
     min-width: 100%;
+  }
+  .hero-page-left-side .overlay-text {
+    display: none;
   }
   .about-page .paragraph {
     min-width: 100%;

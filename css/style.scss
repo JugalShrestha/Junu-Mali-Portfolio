@@ -8,6 +8,7 @@
     --p-color: #fffafa;
     --text: 'Handlee', cursive;
     --header: 'Lobster', cursive;
+    --m-text:'Cormorant Garamond', serif;
 }
 *{
     margin: 0;
@@ -30,7 +31,7 @@ body{
         align-items: center;
         top:0;
         width:100%;
-        height: max-content;
+        height: 6vh;
         z-index: 1;
         background: var(--p-color);
         box-shadow: 0 0vh 1vh var(--shadow);
@@ -41,34 +42,36 @@ body{
             .nav-pc{
                 list-style: none;
                 display: flex;
+                padding:0;
+                max-height: 6vh;
                 flex-direction: row;
                 flex-wrap: nowrap;
                 align-items: center;
                 justify-content: space-evenly;
                 .nav-pc-list{
                     text-align: center;
-                    font-size: 3vh;
+                    font-size: 2vh;
                     font-family: var(--header);
                     width:15vh;
                     cursor: pointer;
                     box-sizing: border-box;
                     &:hover{
-                        transform: scale(1.5);
-                        outline: .1vh solid var(--p2-color);
+                        text-decoration: .2vh underline var(--p2-color);
+                    }
+                    a{
+                        text-decoration: none;
+                        color: var(--text-color);
                     }
                 }
                 #logo-nav{
                   img{
-                    transform: translateY(5vh);
+                    transform: translateY(2vh);
                     width: 10vh;
                     height: 10vh;
                     background: var(--p-color);
                     padding: 1vh;
-                    border-radius: 0 0 5vh 5vh;
+                    border-radius: 0 0 100% 100%;
                   } 
-                  &:hover{
-                    outline: none;
-                  }
                 }
             }
         }
@@ -101,6 +104,12 @@ body{
                     padding: .5vh;
                     cursor: pointer;
                 }
+                #logo-nav-m{
+                    img{
+                        width: 7vh;
+                        height: 5vh;
+                      } 
+                }
             }
         }
     }
@@ -122,24 +131,36 @@ body{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                filter: blur(5px);
+                filter: blur(1px);
                 transform: scale(1.5);
             }
-        }
-        .hero-page-right-side{
-            position: absolute;
-            right:0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50%;
-            height: 100%;
-            background-image:repeating-linear-gradient(45deg,var(--p2-color)1vh,var(--p-color)2vh,transparent 20%),
-            repeating-linear-gradient(315deg,var(--p2-color)1vh,var(--p-color)2vh,transparent 20%),
-            repeating-linear-gradient(45deg,var(--p2-color)3vh,var(--p-color)5vh);
-
+            .overlay{
+                position: absolute;
+                top:0;
+                left: 0;
+                right: 0;
+                bottom:0;
+                background:radial-gradient(var(--p2-color),var(--p-color));
+                opacity: 60%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                .overlay-text{
+                    text-align: center;
+                    font-size: 2vh;
+                    font-family: var(--m-text);
+                    width: 100%;
+                    background: var(--p2-color);
+                    color: var(--p-color);
+                    padding: 1vh;
+                }
+            }
             .hero-page-profile-card{
-                width: 40vh;
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                width: 35vh;
                 height: 50vh;
                 background: var(--p2-color);
                 border-radius: 5vh;
@@ -148,7 +169,6 @@ body{
                 justify-content: center;
                 gap: 2vh;
                 align-items: center;
-                position: relative;
                 overflow: hidden;
                 box-shadow: 0 0 1vh  var(--shadow);
                 .profile-card-photo{
@@ -186,8 +206,97 @@ body{
                     }
                 }
                 .profile-card-icons{
-                    position: absolute;
-                    bottom: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    a{
+                        transition: .2s linear;
+                        padding: 2vh;
+                        filter: grayscale(100%);
+                        &:hover{
+                            filter: grayscale(10%);
+                        }
+                    }
+                }
+            }
+        }
+        .hero-page-right-side{
+            position: absolute;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:50%;
+            height: 100%;
+            padding: 4vh;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-image:repeating-linear-gradient(45deg,var(--p2-color)1vh,var(--p-color)2vh,transparent 20%),
+            repeating-linear-gradient(315deg,var(--p2-color)1vh,var(--p-color)2vh,transparent 20%),
+            repeating-linear-gradient(45deg,var(--p2-color)3vh,var(--p-color)5vh);
+            .overlay{
+                position: absolute;
+                top:0;
+                left: 0;
+                right: 0;
+                bottom:0;
+                background:var(--p2-color);
+                opacity: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+            }
+            .hero-page-profile-card{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                width: 40vh;
+                height: 50vh;
+                background: var(--p2-color);
+                border-radius: 5vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 2vh;
+                align-items: center;
+                overflow: hidden;
+                box-shadow: 0 0 1vh  var(--shadow);
+                .profile-card-photo{
+                    border-radius: 100%;
+                    width:50%;
+                    height: 40%;
+                    overflow: hidden;
+                    outline: .3vh solid var(--p-color);
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-position: center;
+                        filter: sepia(100%);
+                        transform: scale(2.5);
+                        object-fit: cover;
+                    }
+                }
+                .profile-card-name{
+                    font-size: 3vh;
+                    font-family: var(--header);
+                    color: var(--p-color);
+                    text-transform:capitalize;
+                    font-weight: bold;
+                }
+                .profile-card-title{
+                    font-size: 2vh;
+                    text-align: center;
+                    font-family: var(--text);
+                    color: var(--p-color);
+                    text-transform:capitalize;
+                    font-weight: bold;
+                    span{
+                        font-family: 'Courier New', Courier, monospace;
+                        font-size: 1.5vh;
+                    }
+                }
+                .profile-card-icons{
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -218,12 +327,10 @@ body{
             width: 100%;
             height: 10vh;
             text-align: center;
-            background:repeating-linear-gradient(90deg, var(--p-color)3vh,var(--p2-color)4vh,transparent 20vh),
-            repeating-linear-gradient(90deg,var(--p-color)10vh,var(--p2-color)10vh);
             margin-top:10vh;
             margin-bottom: 10vh;
             font-size: 8vh;
-            color:var(--p-color);
+            color:var(--p2-color);
             font-family: var(--header);
         }
         section{
@@ -404,9 +511,10 @@ body{
 
 @media only screen and (max-width: 1200px)
 {
-    .hero-page{
-        .hero-page-left-side{
-            min-width: 100%;
+    .hero-page-left-side{
+        min-width: 100%;
+        .overlay-text{
+            display: none;
         }
     }
     .about-page{

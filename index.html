@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <!--font-family: 'Cormorant Garamond', serif;Main Text-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+
     <!--font-family: 'Handlee', cursive; For text-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,11 +29,11 @@
         <!--Nav bar menu section-->
         <div class="nav-options">
             <ul class="nav-pc">
-                <li class="nav-pc-list">About</li>
-                <li class="nav-pc-list">Arts</li>
-                <li class="nav-pc-list" id="logo-nav"><img src="images/mamu-logo.png" alt="logo"></li>
-                <li class="nav-pc-list">Contact</li>
-                <li class="nav-pc-list">Email Me</li>
+                <li class="nav-pc-list" onclick="scrollToAbout()">About</li>
+                <li class="nav-pc-list" onclick="scrollToArt()">Gallery</li>
+                <li class="nav-pc-list" onclick="scrollToHome()"id="logo-nav"><img src="images/mamu-logo.png" alt="logo"></li>
+                <li class="nav-pc-list" onclick="scrollToContact()">Contact</li>
+                <li class="nav-pc-list"> <a href="mailto:junumalishrestha@gmail.com">Email</a></li>
             </ul>
         </div>
     </section>
@@ -38,7 +42,7 @@
         <div class="nav-options-m">
             <ul class="nav-m">
                 <li class="nav-m-list" id="logo-nav-m">
-                    LOGO
+                    <img src="images/mamu-logo.png" alt="logo">
                 </li>
                 <li class="nav-m-list">
                     ▲
@@ -51,11 +55,41 @@
     <!--Landing page start-->
     <section class="hero-page" id="hero-page-id">
         <div class="hero-page-left-side">
+            <!--Video Slide Show-->
             <video class="hero-page-video"autoplay muted loop>
                 <source src="Videos/ArtSlideShow.mp4" type="video/mp4">
             </video>
+            <!--Black overlay for video-->
+            <div class="overlay">
+                <div class="overlay-text">
+                    Video: Junu Mali's Artworks
+                </div>
+            </div>
+            <!--Profile card for mobile-->
+            <div class="hero-page-profile-card" id="hero-page-profile-card-left-id">
+                <div class="profile-card-photo">
+                    <img src="images/Junu Photo/in-green-sari.jpg" alt="JUNU">
+                </div>
+                <div class="profile-card-name">
+                    Junu Mali Shrestha
+                </div>
+                <div class="profile-card-title">
+                    Artist & Teacher<br>
+                    <span>NP +977 9810159456</span>
+                </div>
+                <div class="profile-card-icons">
+                    <a href="#"><img width="30vh" height="30vh" src="images/Social-media-icons/instagram.png" alt="Insta"></a>
+                    <a href="#"><img width="30vh" height="30vh" src="images/Social-media-icons/tik-tok.png" alt="Tiktok"></a>
+                    <a href="#"><img width="30vh" height="30vh" src="images/Social-media-icons/facebook.png" alt="facebook"></a>              
+                </div>
+            </div>
+            <!--Profile card end-->
         </div>
+        <!--Right side of hero section-->
         <div class="hero-page-right-side" id="hero-page-right-side-id">
+            <div class="overlay">
+
+            </div>
             <div class="hero-page-profile-card">
                 <div class="profile-card-photo">
                     <img src="images/Junu Photo/in-green-sari.jpg" alt="JUNU">
@@ -68,9 +102,9 @@
                     <span>NP +977 9810159456</span>
                 </div>
                 <div class="profile-card-icons">
-                    <a href="#"><img width="40px" height="40px" src="images/Social-media-icons/instagram.png" alt="Insta"></a>
-                    <a href="#"><img width="40px" height="40px" src="images/Social-media-icons/tik-tok.png" alt="Tiktok"></a>
-                    <a href="#"><img width="40px" height="40px" src="images/Social-media-icons/facebook.png" alt="facebook"></a>              
+                    <a href="#"><img width="30vh" height="30vh" src="images/Social-media-icons/instagram.png" alt="Insta"></a>
+                    <a href="#"><img width="30vh" height="30vh" src="images/Social-media-icons/tik-tok.png" alt="Tiktok"></a>
+                    <a href="#"><img width="30vh" height="30vh" src="images/Social-media-icons/facebook.png" alt="facebook"></a>              
                 </div>
             </div>
         </div>
@@ -80,7 +114,7 @@
     <!--Portfolio start-->
     <section class="art-page" id="art-page-id">
         <div class="header">
-           --ARTS--
+           Gallery
         </div>
         <!--Different art sections start-->
         <section class="art-type-thanka">
@@ -370,15 +404,17 @@
                 You can find me on!
             </div>
             <div class="social-links">
-                <li><a href=""><img width="40px" height="40px" src="images/Social-media-icons/facebook.png" alt=""></a></li>
-                <li><a href=""><img width="40px" height="40px" src="images/Social-media-icons/instagram.png" alt=""></a></li>
-                <li><a href=""><img width="40px" height="40px" src="images/Social-media-icons/gmail.png" alt=""></a></li>
-                <li><a href=""><img width="40px" height="40px" src="images/Social-media-icons/youtube.png" alt=""></a></li>
-                <li><a href=""><img width="40px" height="40px" src="images/Social-media-icons/tik-tok.png" alt=""></a></li>
+                <li><a href=""><img width="30vh" height="30vh" src="images/Social-media-icons/facebook.png" alt=""></a></li>
+                <li><a href=""><img width="30vh" height="30vh" src="images/Social-media-icons/instagram.png" alt=""></a></li>
+                <li><a href=""><img width="30vh" height="30vh" src="images/Social-media-icons/gmail.png" alt=""></a></li>
+                <li><a href=""><img width="30vh" height="30vh" src="images/Social-media-icons/youtube.png" alt=""></a></li>
+                <li><a href=""><img width="30vh" height="30vh" src="images/Social-media-icons/tik-tok.png" alt=""></a></li>
             </div>
         </div>
     </section>
     <!--Contact page end-->
     <script src="script/device-width.js"></script>
+    <script src="script/parallax.js"></script>
+    <script src="script/connector.js"></script>
 </body>
 </html>
