@@ -9,11 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
 
-    <!--font-family: 'Handlee', cursive; For text-->
+    <!--font-family: 'Allura', cursive;Cursive Text-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 
+    <!--font-family: 'Open Sans', sans-serif;For Text-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    
     <!--font-family: 'Lobster', cursive; For Header-->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
@@ -24,397 +29,366 @@
     <title>Junu Mali</title>
 </head>
 <body>
-    <!--Nav bar start-->
-    <section class="nav-bar" id="nav-bar-id">
-        <!--Nav bar menu section-->
-        <div class="nav-options">
-            <ul class="nav-pc">
-                <li class="nav-pc-list" onclick="scrollToAbout()">About</li>
-                <li class="nav-pc-list" onclick="scrollToArt()">Gallery</li>
-                <li class="nav-pc-list" onclick="scrollToHome()"id="logo-nav"><img src="images/mamu-logo.png" alt="logo"></li>
-                <li class="nav-pc-list" onclick="scrollToContact()">Contact</li>
-                <li class="nav-pc-list"> <a href="mailto:junumalishrestha@gmail.com">Email</a></li>
-            </ul>
-        </div>
-    </section>
-    <section class="nav-bar-m" id="nav-bar-id-m">
-        <!--Nav bar menu section-->
-        <div class="nav-options-m">
-            <ul class="nav-m">
-                <li class="nav-m-list" id="logo-nav-m">
-                    <img src="images/mamu-logo.png" alt="logo">
-                </li>
-                <li class="nav-m-list">
-                    ▲
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!--Nav bar end-->
-
-    <!--Landing page start-->
-    <section class="hero-page" id="hero-page-id">
-        <div class="hero-page-left-side">
-            <!--Video Slide Show-->
-            <video class="hero-page-video"autoplay muted loop>
-                <source src="Videos/ArtSlideShow.mp4" type="video/mp4">
-            </video>
-            <!--Black overlay for video-->
-            <div class="overlay">
-                <div class="overlay-text">
-                    Video: Junu Mali's Artworks
-                </div>
-            </div>
-            <!--Profile card for mobile-->
-            <div class="hero-page-profile-card" id="hero-page-profile-card-left-id">
-                <div class="profile-card-photo">
-                    <img src="images/Junu Photo/in-green-sari.jpg" alt="JUNU">
-                </div>
-                <div class="profile-card-name">
-                    Junu Mali Shrestha
-                </div>
-                <div class="profile-card-title">
-                    Artist & Teacher<br>
-                    <span>NP +977 9810159456</span>
-                </div>
-                <div class="profile-card-icons">
-                    <a href="#"><img width="30vh" height="30vh" src="images/Social-media-icons/instagram.png" alt="Insta"></a>
-                    <a href="#"><img width="30vh" height="30vh" src="images/Social-media-icons/tik-tok.png" alt="Tiktok"></a>
-                    <a href="#"><img width="30vh" height="30vh" src="images/Social-media-icons/facebook.png" alt="facebook"></a>              
-                </div>
-            </div>
-            <!--Profile card end-->
-        </div>
-        <!--Right side of hero section-->
-        <div class="hero-page-right-side" id="hero-page-right-side-id">
-            <div class="overlay">
+    <div class="loading-screen" id="loading-screen-id">
+        <div class="loading-screen-overlay">
+            <div class="loading-animation">
 
             </div>
-            <div class="hero-page-profile-card">
-                <div class="profile-card-photo">
-                    <img src="images/Junu Photo/in-green-sari.jpg" alt="JUNU">
-                </div>
-                <div class="profile-card-name">
-                    Junu Mali Shrestha
-                </div>
-                <div class="profile-card-title">
-                    Artist & Teacher<br>
-                    <span>NP +977 9810159456</span>
-                </div>
-                <div class="profile-card-icons">
-                    <a href="#"><img width="30vh" height="30vh" src="images/Social-media-icons/instagram.png" alt="Insta"></a>
-                    <a href="#"><img width="30vh" height="30vh" src="images/Social-media-icons/tik-tok.png" alt="Tiktok"></a>
-                    <a href="#"><img width="30vh" height="30vh" src="images/Social-media-icons/facebook.png" alt="facebook"></a>              
-                </div>
-            </div>
         </div>
-    </section>
-    <!--landing page end-->
+    </div>
+    <!--Holds Everything-->
+    <section class="everything">
+        <!--Contains left and Right section-->
+        <section class="display">
+            <!--Start of Menu Section-->
+            <section class="left-section">
+                <!--Start of Menu List-->
+                <div class="menu">
+                    
+                    <div id="menu-button-id" class="about-button">
+                        hello
+                    </div>
+                    <div id="menu-button-id" class="project-button">
+                        I'm
+                    </div>
+                    <div id="menu-button-id" class="contact-button">
+                        Junu Mali Shrestha
+                    </div>
+                </div>
+                <!--End of Menu List-->
+            </section>
+            <!--Start of Middle text-->
+            <div id="menu-button-id" class="main-middle-text">
+                Junu Mali<br>Shrestha
+            </div>
+            <!--End of Middle text-->
+            <!--Ending of Menu Section-->
 
-    <!--Portfolio start-->
-    <section class="art-page" id="art-page-id">
-        <div class="header">
-           Gallery
-        </div>
-        <!--Different art sections start-->
-        <section class="art-type-thanka">
-            <div class="art-container">
-                <div class="art-showcase">
-                    <div class="image-container">
-                        <img src="images/Arts/Thanka/IMG_0089.JPG" alt="Thanka-art">
-                    </div>
-                    <div class="image-description">
-                        <div class="image-header">
-                            Ganesh
-                        </div>
-                        <div class="image-size">
-                            200*200
-                        </div>
-                        <div class="image-price">
-                            Sold for NRS. 50,000
-                        </div>
-                    </div>
+            <!--Start of Context Section-->
+            <section class="right-section">
+                <!--Start of contacts-->
+                <div class="home-page-contacts">
+                    <a target="_blank" href="https://www.instagram.com/junu_mali_shrestha/"><img src="images/Social-media-icons/instagram.png" alt="Insta"></a>
+                    <a target="_blank" href="https://www.tiktok.com/@junuarts"><img src="images/Social-media-icons/tik-tok.png" alt="Tiktok"></a>
+                    <a target="_blank" href="#"><img src="images/Social-media-icons/facebook.png" alt="facebook"></a>  
                 </div>
-                <div class="art-showcase">
-                    <div class="image-container">
-                        <img src="images/Arts/Thanka/IMG_1946.JPG" alt="Thanka-art">
+                <!--End of contacts-->
+                 <!--Start of contact page-->
+                 <section id="pages" class="contact-page">
+                    <div class="contact-page-header">
+                        Find Me On
                     </div>
-                    <div class="image-description">
-                        <div class="image-header">
-                            Ganesh
-                        </div>
-                        <div class="image-size">
-                            200*200
-                        </div>
-                        <div class="image-price">
-                            Sold for NRS. 50,000
-                        </div>
+                    <div class="social-links">
+                        <a target="_blank" href="https://www.instagram.com/junu_mali_shrestha/"><img src="images/Social-media-icons/instagram.png" alt="Insta"></a>
+                        <a target="_blank" href="https://www.tiktok.com/@junuarts"><img src="images/Social-media-icons/tik-tok.png" alt="Tiktok"></a>
+                        <a target="_blank" href="#"><img src="images/Social-media-icons/facebook.png" alt="facebook"></a>  
+                        <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/Social-media-icons/email.png" alt="Email"></a>
+                        <a href="http://" target="_blank" rel="noopener noreferrer"><img src="images/Social-media-icons/viber.png" alt=""></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/Social-media-icons/youtube.png" alt="Youtube"></a>    
                     </div>
-                </div>
-                <div class="art-showcase">
-                    <div class="image-container">
-                        <img src="images/Arts/Thanka/IMG_2183.JPG" alt="Thanka-art">
+                 </section>
+                 <!--End of contact page-->
+                <!--Start of About page-->
+                <section id="pages" class="about-page">
+                    <div class="about-page-header">
+                        About Junu
                     </div>
-                    <div class="image-description">
-                        <div class="image-header">
-                            Buddha
+                    <div class="about-page-bio">
+                        <div class="about-page-photo">
+                            <img src="images/Junu Photo/in-green-sari.jpg" alt="Photo">
                         </div>
-                        <div class="image-size">
-                            200*200
-                        </div>
-                        <div class="image-price">
-                            Sold for NRS. 50,000
+                        <div class="about-page-intro">
+                            Hi! I am Junu Mali Shrestha and I am an Artist & a teacher.
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="art-type-mural">
-            <div class="art-container">
-                <div class="art-showcase">
-                    <div class="image-container">
-                        <img src="images/Arts/Mural/IMG_4601.JPG" alt="Mural-art">
+                </section>
+                <!--End of About page-->
+                <!--Start of Project page-->
+                <section id="pages" class="project-page">
+                    <div class="project-page-header">
+                        Art Display
                     </div>
-                    <div class="image-description">
-                        <div class="image-header">
-                            Wall Art
+                <!--Different art sections start-->
+                    <section class="art-type-thanka">
+                        <div class="art-container">
+                            <div class="art-showcase">
+                                <div class="image-container">
+                                    <img src="images/Arts/Thanka/IMG_0089.JPG" alt="Thanka-art">
+                                </div>
+                                <div class="image-description">
+                                    <div class="image-header">
+                                        Ganesh
+                                    </div>
+                                    <div class="image-size">
+                                        200*200
+                                    </div>
+                                    <div class="image-price">
+                                        Sold for NRS. 50,000
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="art-showcase">
+                                <div class="image-container">
+                                    <img src="images/Arts/Thanka/IMG_1946.JPG" alt="Thanka-art">
+                                </div>
+                                <div class="image-description">
+                                    <div class="image-header">
+                                        Ganesh
+                                    </div>
+                                    <div class="image-size">
+                                        200*200
+                                    </div>
+                                    <div class="image-price">
+                                        Sold for NRS. 50,000
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="art-showcase">
+                                <div class="image-container">
+                                    <img src="images/Arts/Thanka/IMG_2183.JPG" alt="Thanka-art">
+                                </div>
+                                <div class="image-description">
+                                    <div class="image-header">
+                                        Buddha
+                                    </div>
+                                    <div class="image-size">
+                                        200*200
+                                    </div>
+                                    <div class="image-price">
+                                        Sold for NRS. 50,000
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="image-size">
-                            200*200
+                    </section>
+                    <section class="art-type-mural">
+                        <div class="art-container">
+                            <div class="art-showcase">
+                                <div class="image-container">
+                                    <img src="images/Arts/Mural/IMG_4601.JPG" alt="Mural-art">
+                                </div>
+                                <div class="image-description">
+                                    <div class="image-header">
+                                        Wall Art
+                                    </div>
+                                    <div class="image-size">
+                                        200*200
+                                    </div>
+                                    <div class="image-price">
+                                        Sold for NRS. 50,000
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="art-showcase">
+                                <div class="image-container">
+                                    <img src="images/Arts/Mural/IMG_7536.JPG" alt="Mural-art">
+                                </div>
+                                <div class="image-description">
+                                    <div class="image-header">
+                                        Wall Art
+                                    </div>
+                                    <div class="image-size">
+                                        200*200
+                                    </div>
+                                    <div class="image-price">
+                                        Sold for NRS. 50,000
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="art-showcase">
+                                <div class="image-container">
+                                    <img src="images/Arts/Mural/IMG_9239.JPG" alt="Mural-art">
+                                </div>
+                                <div class="image-description">
+                                    <div class="image-header">
+                                        Bamboo
+                                    </div>
+                                    <div class="image-size">
+                                        200*200
+                                    </div>
+                                    <div class="image-price">
+                                        Sold for NRS. 50,000
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="image-price">
-                            Sold for NRS. 50,000
+                    </section>
+                    <section class="art-type-modern">
+                        <div class="art-container">
+                            <div class="art-showcase">
+                                <div class="image-container">
+                                    <img src="images/Arts/Modern/IMG_2011.JPG" alt="Modern-art">
+                                </div>
+                                <div class="image-description">
+                                    <div class="image-header">
+                                        Krishna
+                                    </div>
+                                    <div class="image-size">
+                                        200*200
+                                    </div>
+                                    <div class="image-price">
+                                        Sold for NRS. 50,000
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="art-showcase">
+                                <div class="image-container">
+                                    <img src="images/Arts/Modern/IMG_3480.JPG" alt="Modern-art">
+                                </div>
+                                <div class="image-description">
+                                    <div class="image-header">
+                                        Peacock
+                                    </div>
+                                    <div class="image-size">
+                                        200*200
+                                    </div>
+                                    <div class="image-price">
+                                        Sold for NRS. 50,000
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="art-showcase">
+                                <div class="image-container">
+                                    <img src="images/Arts/Modern/IMG_4436.JPG" alt="Modern-art">
+                                </div>
+                                <div class="image-description">
+                                    <div class="image-header">
+                                        Bird
+                                    </div>
+                                    <div class="image-size">
+                                        200*200
+                                    </div>
+                                    <div class="image-price">
+                                        Sold for NRS. 50,000
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </section>
+                    <section class="art-type-potrait">
+                        <div class="art-container">
+                            <div class="art-showcase">
+                                <div class="image-container">
+                                    <img src="images/Arts/Potrait/IMG_4537.JPG" alt="Potrait-art">
+                                </div>
+                                <div class="image-description">
+                                    <div class="image-header">
+                                        Potrait
+                                    </div>
+                                    <div class="image-size">
+                                        200*200
+                                    </div>
+                                    <div class="image-price">
+                                        Sold for NRS. 50,000
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="art-showcase">
+                                <div class="image-container">
+                                    <img src="images/Arts/Potrait/IMG_4539.JPG" alt="Potrait-art">
+                                </div>
+                                <div class="image-description">
+                                    <div class="image-header">
+                                        Potrait
+                                    </div>
+                                    <div class="image-size">
+                                        200*200
+                                    </div>
+                                    <div class="image-price">
+                                        Sold for NRS. 50,000
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="art-showcase">
+                                <div class="image-container">
+                                    <img src="images/Arts/Potrait/IMG_7860.JPG" alt="Potrait-art">
+                                </div>
+                                <div class="image-description">
+                                    <div class="image-header">
+                                        Potrait
+                                    </div>
+                                    <div class="image-size">
+                                        200*200
+                                    </div>
+                                    <div class="image-price">
+                                        Sold for NRS. 50,000
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="art-type-landscape">
+                        <div class="art-container">
+                            <div class="art-showcase">
+                                <div class="image-container">
+                                    <img src="images/Arts/Landscape/IMG_1947.JPG" alt="Landscape-art">
+                                </div>
+                                <div class="image-description">
+                                    <div class="image-header">
+                                        Basantapur
+                                    </div>
+                                    <div class="image-size">
+                                        200*200
+                                    </div>
+                                    <div class="image-price">
+                                        Sold for NRS. 50,000
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="art-showcase">
+                                <div class="image-container">
+                                    <img src="images/Arts/Landscape/IMG_3803.JPG" alt="Landscape-art">
+                                </div>
+                                <div class="image-description">
+                                    <div class="image-header">
+                                        Swoyambhu
+                                    </div>
+                                    <div class="image-size">
+                                        200*200
+                                    </div>
+                                    <div class="image-price">
+                                        Sold for NRS. 50,000
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="art-showcase">
+                                <div class="image-container">
+                                    <img src="images/Arts/Landscape/IMG_7983.JPG" alt="Landscape-art">
+                                </div>
+                                <div class="image-description">
+                                    <div class="image-header">
+                                        Aquarium
+                                    </div>
+                                    <div class="image-size">
+                                        200*200
+                                    </div>
+                                    <div class="image-price">
+                                        Sold for NRS. 50,000
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                <!--Different art sections end-->
+                </section>
+                <!--End of Project page-->
+                <!--Start of Home page-->
+                <section id="pages" class="home-page">
+                    <div class="home-page-video">
+                        <div class="video-black-overlay"></div>
+                        <video loop autoplay muted src="Videos/ArtSlideShow.mp4"></video>
                     </div>
-                </div>
-                <div class="art-showcase">
-                    <div class="image-container">
-                        <img src="images/Arts/Mural/IMG_7536.JPG" alt="Mural-art">
-                    </div>
-                    <div class="image-description">
-                        <div class="image-header">
-                            Wall Art
-                        </div>
-                        <div class="image-size">
-                            200*200
-                        </div>
-                        <div class="image-price">
-                            Sold for NRS. 50,000
-                        </div>
-                    </div>
-                </div>
-                <div class="art-showcase">
-                    <div class="image-container">
-                        <img src="images/Arts/Mural/IMG_9239.JPG" alt="Mural-art">
-                    </div>
-                    <div class="image-description">
-                        <div class="image-header">
-                            Bamboo
-                        </div>
-                        <div class="image-size">
-                            200*200
-                        </div>
-                        <div class="image-price">
-                            Sold for NRS. 50,000
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="art-type-modern">
-            <div class="art-container">
-                <div class="art-showcase">
-                    <div class="image-container">
-                        <img src="images/Arts/Modern/IMG_2011.JPG" alt="Modern-art">
-                    </div>
-                    <div class="image-description">
-                        <div class="image-header">
-                            Krishna
-                        </div>
-                        <div class="image-size">
-                            200*200
-                        </div>
-                        <div class="image-price">
-                            Sold for NRS. 50,000
-                        </div>
-                    </div>
-                </div>
-                <div class="art-showcase">
-                    <div class="image-container">
-                        <img src="images/Arts/Modern/IMG_3480.JPG" alt="Modern-art">
-                    </div>
-                    <div class="image-description">
-                        <div class="image-header">
-                            Peacock
-                        </div>
-                        <div class="image-size">
-                            200*200
-                        </div>
-                        <div class="image-price">
-                            Sold for NRS. 50,000
-                        </div>
-                    </div>
-                </div>
-                <div class="art-showcase">
-                    <div class="image-container">
-                        <img src="images/Arts/Modern/IMG_4436.JPG" alt="Modern-art">
-                    </div>
-                    <div class="image-description">
-                        <div class="image-header">
-                            Bird
-                        </div>
-                        <div class="image-size">
-                            200*200
-                        </div>
-                        <div class="image-price">
-                            Sold for NRS. 50,000
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="art-type-potrait">
-            <div class="art-container">
-                <div class="art-showcase">
-                    <div class="image-container">
-                        <img src="images/Arts/Potrait/IMG_4537.JPG" alt="Potrait-art">
-                    </div>
-                    <div class="image-description">
-                        <div class="image-header">
-                            Potrait
-                        </div>
-                        <div class="image-size">
-                            200*200
-                        </div>
-                        <div class="image-price">
-                            Sold for NRS. 50,000
-                        </div>
-                    </div>
-                </div>
-                <div class="art-showcase">
-                    <div class="image-container">
-                        <img src="images/Arts/Potrait/IMG_4539.JPG" alt="Potrait-art">
-                    </div>
-                    <div class="image-description">
-                        <div class="image-header">
-                            Potrait
-                        </div>
-                        <div class="image-size">
-                            200*200
-                        </div>
-                        <div class="image-price">
-                            Sold for NRS. 50,000
-                        </div>
-                    </div>
-                </div>
-                <div class="art-showcase">
-                    <div class="image-container">
-                        <img src="images/Arts/Potrait/IMG_7860.JPG" alt="Potrait-art">
-                    </div>
-                    <div class="image-description">
-                        <div class="image-header">
-                            Potrait
-                        </div>
-                        <div class="image-size">
-                            200*200
-                        </div>
-                        <div class="image-price">
-                            Sold for NRS. 50,000
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="art-type-landscape">
-            <div class="art-container">
-                <div class="art-showcase">
-                    <div class="image-container">
-                        <img src="images/Arts/Landscape/IMG_1947.JPG" alt="Landscape-art">
-                    </div>
-                    <div class="image-description">
-                        <div class="image-header">
-                            Basantapur
-                        </div>
-                        <div class="image-size">
-                            200*200
-                        </div>
-                        <div class="image-price">
-                            Sold for NRS. 50,000
-                        </div>
-                    </div>
-                </div>
-                <div class="art-showcase">
-                    <div class="image-container">
-                        <img src="images/Arts/Landscape/IMG_3803.JPG" alt="Landscape-art">
-                    </div>
-                    <div class="image-description">
-                        <div class="image-header">
-                            Swoyambhu
-                        </div>
-                        <div class="image-size">
-                            200*200
-                        </div>
-                        <div class="image-price">
-                            Sold for NRS. 50,000
-                        </div>
-                    </div>
-                </div>
-                <div class="art-showcase">
-                    <div class="image-container">
-                        <img src="images/Arts/Landscape/IMG_7983.JPG" alt="Landscape-art">
-                    </div>
-                    <div class="image-description">
-                        <div class="image-header">
-                            Aquarium
-                        </div>
-                        <div class="image-size">
-                            200*200
-                        </div>
-                        <div class="image-price">
-                            Sold for NRS. 50,000
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Different art sections end-->
-    </section>
-    <!--Portfolio end-->
+                </section>
+                <!--End of Home page-->
 
-    <!--About page start-->
-    <section class="about-page" id="about-page-id">
-        <div class="header">
-            -About Junu-
-        </div>
-        <div class="description">
-            <div class="photo">
-                <img src="images/SwanB&W.png" alt="">
-            </div>
-            <div class="paragraph">
-                I am an Artist living as a teacher teaching
-                primary level students for a living. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eaque exercitationem excepturi veniam totam nisi velit libero id, sint nemo incidunt blanditiis, praesentium voluptas temporibus dolore pariatur perferendis hic impedit ab quis illum voluptatibus. Illo distinctio odio pariatur aut voluptatum itaque inventore molestias debitis. Accusamus sunt error quos repudiandae sit!
-            </div>
-        </div>
+            </section>
+            <!--End of Context Section-->
+
+        </section>
     </section>
-    <!--About page end-->
-    <!--Contact page start-->
-    <section class="contact-page" id="contact-page-id">
-        <div class="description">
-            <div class="header">
-                You can find me on!
-            </div>
-            <div class="social-links">
-                <li><a href=""><img width="30vh" height="30vh" src="images/Social-media-icons/facebook.png" alt=""></a></li>
-                <li><a href=""><img width="30vh" height="30vh" src="images/Social-media-icons/instagram.png" alt=""></a></li>
-                <li><a href=""><img width="30vh" height="30vh" src="images/Social-media-icons/gmail.png" alt=""></a></li>
-                <li><a href=""><img width="30vh" height="30vh" src="images/Social-media-icons/youtube.png" alt=""></a></li>
-                <li><a href=""><img width="30vh" height="30vh" src="images/Social-media-icons/tik-tok.png" alt=""></a></li>
-            </div>
-        </div>
-    </section>
-    <!--Contact page end-->
-    <script src="script/device-width.js"></script>
-    <script src="script/parallax.js"></script>
-    <script src="script/connector.js"></script>
+    <!--Ending Everything-->
+    
+    <script src="script/menu.js"></script>
+    <script src="script/loader.js"></script>
 </body>
 </html>
